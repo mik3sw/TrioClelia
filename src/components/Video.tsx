@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { asset } from "@/lib/asset";
 import SplitLines from "@/components/SplitLines";
 import Reveal from "@/components/Reveal";
 
@@ -37,12 +39,10 @@ function VideoCard({ id, titolo }: Clip) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`}
+            // Copertine salvate in /public/video: nessuna richiesta a YouTube prima del clic.
+            src={asset(`/video/${id}.jpg`)}
             alt={titolo}
             loading="lazy"
-            onError={(e) => {
-              e.currentTarget.src = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
-            }}
             className="absolute inset-0 h-full w-full scale-[1.02] object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.06]"
           />
           {/* Velatura per leggibilità e coerenza cromatica */}
@@ -92,6 +92,15 @@ export default function Video() {
           </Reveal>
         ))}
       </div>
+
+      <p className="mt-8 text-xs leading-relaxed text-mist/70">
+        Avviando un video, il contenuto viene caricato da YouTube, che può
+        impostare cookie sul vostro dispositivo.{" "}
+        <Link href="/privacy/" className="underline underline-offset-4 hover:text-ivory">
+          Maggiori informazioni
+        </Link>
+        .
+      </p>
     </section>
   );
 }

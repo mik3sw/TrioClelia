@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
@@ -19,6 +21,12 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-ivory/10 pt-8 text-xs uppercase tracking-[0.2em] text-mist md:flex-row">
           <span>© {year} Trio Clelia</span>
+          <Link
+            href="/privacy/"
+            className="link-fine transition-colors hover:text-ivory"
+          >
+            Privacy e cookie
+          </Link>
           <span>Musica dal vivo per matrimoni ed eventi</span>
         </div>
       </div>

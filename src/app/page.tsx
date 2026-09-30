@@ -9,7 +9,7 @@ import Repertorio from "@/components/Repertorio";
 import Video from "@/components/Video";
 import Testimonianze from "@/components/Testimonianze";
 import Attrezzatura from "@/components/Attrezzatura";
-import Prezzi from "@/components/Prezzi";
+// import Prezzi from "@/components/Prezzi";
 import FAQ from "@/components/FAQ";
 import Contatti from "@/components/Contatti";
 import Footer from "@/components/Footer";
@@ -29,7 +29,7 @@ export default function Home() {
         <Video />
         <Testimonianze />
         <Attrezzatura />
-        <Prezzi />
+        {/* <Prezzi /> */}
         <FAQ />
         <Contatti />
       </main>

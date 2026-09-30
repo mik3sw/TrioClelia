@@ -5,7 +5,7 @@
  * Pages è l'URL completo del sito (dominio + eventuale sottocartella). In
  * locale o come fallback usa il dominio definitivo.
  */
-import { LISTINO } from "@/lib/prezzi";
+// import { LISTINO } from "@/lib/prezzi";
 
 const RAW_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://trioclelia.it";
 
@@ -96,14 +96,15 @@ export function jsonLd() {
           name: "Musica dal vivo per la cerimonia di matrimonio",
           description:
             "Pianoforte, violino e violoncello dal vivo per la cerimonia. Tariffa unica, non calcolata a ore. Include sopralluogo, attrezzatura professionale, soundcheck, prove sul repertorio concordato e microfoni per gli sposi.",
-          price: String(LISTINO.cachetBase),
-          priceCurrency: "EUR",
-          priceSpecification: {
-            "@type": "PriceSpecification",
-            price: String(LISTINO.cachetBase),
-            priceCurrency: "EUR",
-            valueAddedTaxIncluded: false,
-          },
+          // Prezzo nascosto: il cachet viene concordato caso per caso.
+          // price: String(LISTINO.cachetBase),
+          // priceCurrency: "EUR",
+          // priceSpecification: {
+          //   "@type": "PriceSpecification",
+          //   price: String(LISTINO.cachetBase),
+          //   priceCurrency: "EUR",
+          //   valueAddedTaxIncluded: false,
+          // },
           areaServed: "Milano e Lombardia",
           availability: "https://schema.org/InStock",
         },

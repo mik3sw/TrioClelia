@@ -6,7 +6,7 @@ const links = [
   { label: "Il Trio", href: "#trio" },
   { label: "Repertorio", href: "#repertorio" },
   { label: "Galleria", href: "#galleria" },
-  { label: "Cachet", href: "#prezzi" },
+  // { label: "Cachet", href: "#prezzi" },
   { label: "Contatti", href: "#contatti" },
 ];
 

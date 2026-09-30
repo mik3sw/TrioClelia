@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import SplitLines from "@/components/SplitLines";
 import Reveal from "@/components/Reveal";
 
@@ -122,6 +123,13 @@ export default function Contatti() {
                 →
               </span>
             </button>
+            <p className="-mt-2 text-xs leading-relaxed text-mist/70">
+              Inviando la richiesta dichiarate di aver letto l&apos;
+              <Link href="/privacy/" className="underline underline-offset-4 hover:text-ivory">
+                informativa privacy
+              </Link>
+              .
+            </p>
             {sent && (
               <p className="text-sm text-mist">
                 Si aprirà il vostro client di posta con il messaggio già

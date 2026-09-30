@@ -1,7 +1,7 @@
 import SplitLines from "@/components/SplitLines";
 import Reveal from "@/components/Reveal";
 import { CONTACT_EMAIL, CONTACT_TEL } from "@/lib/site";
-import { LISTINO, euro } from "@/lib/prezzi";
+// import { LISTINO, euro } from "@/lib/prezzi";
 
 /**
  * Domande e risposte pensate per GEO: ogni risposta è autoconsistente,
@@ -18,9 +18,11 @@ const faq = [
   },
   {
     q: "Quanto costa il Trio Clelia per un matrimonio?",
-    a: `Il cachet per la cerimonia parte da ${euro(
-      LISTINO.cachetBase,
-    )} (IVA esclusa), con una tariffa unica non calcolata a ore. Include sopralluogo, attrezzatura, soundcheck, prove sul repertorio concordato e microfoni per gli sposi.`,
+    // Prezzo nascosto: il cachet viene concordato caso per caso.
+    // a: `Il cachet per la cerimonia parte da ${euro(
+    //   LISTINO.cachetBase,
+    // )} (IVA esclusa), con una tariffa unica non calcolata a ore. Include sopralluogo, attrezzatura, soundcheck, prove sul repertorio concordato e microfoni per gli sposi.`,
+    a: "Il cachet per la cerimonia è una tariffa unica, non calcolata a ore, concordata con gli sposi in base all'evento. Include sopralluogo, attrezzatura, soundcheck, prove sul repertorio concordato e microfoni per gli sposi. Scriveteci data e luogo per ricevere una proposta su misura.",
   },
   {
     q: "Cosa è incluso nel cachet della cerimonia?",
